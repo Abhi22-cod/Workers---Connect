@@ -34,7 +34,7 @@ It provides a clean user interface, login & location setup, and a category-based
 ## 📸 Screenshots
 
 - **Login Page**  (https://github.com/Abhi22-cod/Workers---Connect/blob/main/login_page.png)
-- **Location Setup**  ()
+- **Location Setup**  (https://github.com/Abhi22-cod/Workers---Connect/blob/main/location_page.png)
 - **Dashboard with Categories**  
 - **Worker Listing**
 
