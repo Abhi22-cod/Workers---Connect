@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkerConnect - Find Local Workers</title>
+    <!-- Link to the custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <!-- Login Page -->
+    <div id="loginPage" class="page-container">
+        <div class="card">
+            <div class="text-center">
+                <h1 class="main-title">WorkerConnect 🤝</h1>
+                <p class="subtitle">Find trusted local workers</p>
+            </div>
+            
+            <form id="loginForm" class="form">
+                <div class="form-field">
+                    <label class="label">Username</label>
+                    <input type="text" id="username" required class="input">
+                </div>
+                
+                <div class="form-field">
+                    <label class="label">Password</label>
+                    <input type="password" id="password" required class="input">
+                </div>
+                
+                <div class="form-field">
+                    <label class="label">Cell Number</label>
+                    <input type="tel" id="cellNumber" required class="input" placeholder="+91 1234567891">
+                </div>
+                
+                <button type="submit" class="button button-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Location Setup Page -->
+    <div id="locationPage" class="page-container hidden">
+        <div class="card">
+            <div class="text-center">
+                <h2 class="section-title">Setup Your Location</h2>
+                <p class="subtitle">Help us find workers near you</p>
+            </div>
+            
+            <form id="locationForm" class="form">
+                <div class="form-field">
+                    <label class="label">City/Location</label>
+                    <input type="text" id="location" required class="input" placeholder="Enter your city">
+                </div>
+                
+                <div class="form-field">
+                    <label class="label">Full Address</label>
+                    <textarea id="address" required rows="3" class="input textarea" placeholder="Enter your complete address"></textarea>
+                </div>
+                
+                <button type="submit" class="button button-success">Continue to Dashboard</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div>
+                    <h1 class="header-title">WorkerConnect</h1>
+                    <p class="header-subtitle" id="userLocation">Loading location...</p>
+                </div>
+                <button id="logoutBtn" class="button button-danger">Logout</button>
+            </div>
+        </header>
+
+        <!-- Service Categories -->
+        <main class="main">
+            <div class="section-intro">
+                <h2 class="section-title">Find Local Workers</h2>
+                <p class="subtitle">Choose a service category to find trusted professionals</p>
+            </div>
+
+            <!-- Category Buttons -->
+            <div class="category-grid">
+                <button data-category="plumber" class="category-button button-blue">
+                    <div class="icon-large">🔧</div>
+                    <h3 class="category-title">PLUMBER</h3>
+                    <p class="category-subtitle">Pipes, leaks, installations</p>
+                </button>
+                
+                <button data-category="electrician" class="category-button button-yellow">
+                    <div class="icon-large">⚡</div>
+                    <h3 class="category-title">ELECTRICIAN</h3>
+                    <p class="category-subtitle">Wiring, repairs, installations</p>
+                </button>
+                
+                <button data-category="daily-wage" class="category-button button-green">
+                    <div class="icon-large">👷</div>
+                    <h3 class="category-title">DAILY WAGE WORKERS</h3>
+                    <p class="category-subtitle">General labor, construction</p>
+                </button>
+                
+                <button data-category="movers" class="category-button button-purple">
+                    <div class="icon-large">📦</div>
+                    <h3 class="category-title">PACKERS & MOVERS</h3>
+                    <p class="category-subtitle">Moving, packing services</p>
+                </button>
+            </div>
+
+            <!-- Workers List -->
+            <div id="workersSection" class="workers-section hidden">
+                <div class="section-header">
+                    <h3 id="categoryTitle" class="section-title"></h3>
+                    <button id="backBtn" class="back-button">← Back to Categories</button>
+                </div>
+                
+                <div id="workersList" class="workers-grid">
+                    <!-- Workers will be populated here by JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- The custom message box and overlay will be dynamically added here by JavaScript -->
+    
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
